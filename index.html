@@ -1,80 +1,524 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="/css/style.css" />
-		<title>Document</title>
-	</head>
-	<body>
-		<main>
-			<div class="container mx-auto p-6">
-				<h1 class="text-5xl font-black text-green-500">Vite + Tailwind Setup</h1>
-				<div class="feature-container mt-5 relative">
-					<div class="image-container flex items-center">
-						<div class="svg-container">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								class="h-6 w-6"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke="currentColor"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
-									d="M5 13l4 4L19 7"
-								/>
-							</svg>
-						</div>
-						<p class="Feature-item pl-4">Hot reloading</p>
-					</div>
-				</div>
-				<div class="feature-container mt-5 relative">
-					<div class="image-container flex items-center">
-						<div class="svg-container">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								class="h-6 w-6"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke="currentColor"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
-									d="M5 13l4 4L19 7"
-								/>
-							</svg>
-						</div>
-						<p class="Feature-item pl-4">PostCss</p>
-					</div>
-				</div>
-				<div class="feature-container mt-5 relative">
-					<div class="image-container flex items-center">
-						<div class="svg-container">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								class="h-6 w-6"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke="currentColor"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
-									d="M5 13l4 4L19 7"
-								/>
-							</svg>
-						</div>
-						<p class="Feature-item pl-4">Auto Prefixer</p>
-					</div>
-				</div>
-			</div>
-		</main>
-	</body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script defer src="./node_modules/@fortawesome//fontawesome-free/js/all.js"></script>
+
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="/css/custom.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <header class="px-4 py-4 shadow-xl">
+    <!-- Top Navigation -->
+    <div class="top-navigation flex justify-between items-center px-2">
+      <!-- Left-nav-container -->
+      <div class="left-nav-container w-3/4 flex items-center">
+        <div class="logo px-4">
+          <img src="./images/unspalsh logo.jpg" alt="" />
+        </div>
+        <div class="input-container relative w-full flex items-center rounded-3xl px-4 py-2">
+          <i class="fas fa-search absolute ml-4"></i>
+          <input type="text"
+            class="search-bar border-2 bg-slate-200 placeholder:text-slate-600 w-full rounded-3xl py-2 px-10 focus:bg-white"
+            placeholder="Search free high resultion photos" />
+          <i class="fas fa-compress text-xl absolute right-10 cursor-pointer hover:text-gray-400"></i>
+        </div>
+      </div>
+      <!-- Right-nav-container -->
+      <div class="right-nav-container w-1/4 flex justify-between">
+        <ul class="flex w-1/2 justify-between py-3 px-3 border-r-2 border-r-pink-300">
+          <li class="nav-item">Explore</li>
+          <li class="nav-item">Advertsie</li>
+          <li class="nav-item">Blog</li>
+        </ul>
+
+        <div class="litle-nav flex w-1/2 px-4 items-center justify-between">
+          <a href="" class="nav-item">Log in</a>
+          <button
+            class="login-button border-2 border-slate-200 hover:border-slate-400 transition-all transition-timing-function: linear; px-3 py-1 ml-2">
+            Submit Photo
+          </button>
+          <div class="mobile-nav">
+            <i class="fas fa-bars text-xl text-gray-500 hover:text-black cursor-pointer"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-navigation flex items-center">
+      <div class="edetorial-block w-20 py-2 border-r-2 border-solid border-gray-300">
+        <p>Editorial</p>
+      </div>
+      <div class="bottom-nav-container w-full relative flex items-center">
+        <i class="fas fa-chevron-left absolute left-3"></i>
+        <ul class="flex justify-between w-full px-12">
+          <li>Item</li>
+          <li>Item</li>
+          <li>Item</li>
+          <li>Item</li>
+          <li>Item</li>
+          <li>Item</li>
+          <li>Item</li>
+          <li>Item</li>
+          <li>Item</li>
+          <li>Item</li>
+          <li>Item</li>
+          <li>Item</li>
+          <li>Item</li>
+          <li>Item</li>
+        </ul>
+        <i class="fas fa-chevron-right absolute right-3"></i>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <div class="section hero h-[600px] bg-slate-300 flex items-center bg-cover bg-center relative">
+    <div class="w-[1000px] mx-auto">
+      <div class="hero-content text-white">
+
+        <h1 class="hero-title font-bold mb-4 text-5xl">Unsplash</h1>
+        <p class="w-15">The internet’s source of freely-usable images. <br>
+          Powered by creators everywhere.</p>
+      </div>
+      <div class="input-container relative w-full flex items-center rounded-3xl my-4 py-2">
+        <i class="fas fa-search absolute ml-4"></i>
+        <input type="text"
+          class="search-bar border-2 bg-slate-200 placeholder:text-slate-600 w-full rounded-3xl py-2 px-10 focus:bg-white"
+          placeholder="Search free high resultion photos" />
+        <i class="fas fa-compress text-xl absolute right-10 cursor-pointer hover:text-gray-400"></i>
+      </div>
+      <p class="text-white">Trending: flowerwall, papersback, groundshappy, love</p>
+
+    </div>
+    <div class="hero-bottom flex text-white items-center justify-between w-full  p-4 absolute bottom-0 right-0">
+      <div class="hero-att">
+        <p>Photo of the Day by
+          Miroslav Škopek</p>
+      </div>
+      <div class="unsplash-license">
+        <p>Read more about the Unsplash License</p>
+      </div>
+      <div class="unsplash-license text-right">
+        <h2>SQUARESPACE</h2>
+        <p>All you need to create a website.</p>
+      </div>
+    </div>
+  </div>
+  <section class="image-grid mt-10">
+    <div class="image-container container mx-auto ">
+      <!-- image item -->
+      <div class="image-item relative ">
+        <img src="https://source.unsplash.com/random/?man" alt="">
+        <!-- image Actions -->
+        <div class="image-actions-container">
+          <div class="image-actions flex absolute top-4 right-4">
+            <div class="image-actions-icon">
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="image-actions-icon">
+              <i class="fas fa-heart"></i>
+            </div>
+          </div>
+          <!-- Download Image -->
+          <div class="download-image absolute right-4 bottom-4 p-3 rounded-md bg-gray-200 text-black">
+            <i class="fas fa-arrow-down"></i>
+          </div>
+          <!-- Author Details -->
+          <div class='author-details absolute bottom-4 left-4 flex'>
+            <div class="author-details-image mr-4">
+              <img class='details-avatar' src="https://i.pravatar.cc/300" alt=" ">
+            </div>
+            <div class="author-details-container">
+              <div class="detail-name">Brad Delvin</div>
+              <p class='detail-desc'>Lorem ipsum dolor sit amet.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- image item -->
+      <div class="image-item relative">
+        <img src="https://source.unsplash.com/random/?city" alt="">
+        <!-- image Actions -->
+        <div class="image-actions-container">
+          <div class="image-actions flex absolute top-4 right-4">
+            <div class="image-actions-icon">
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="image-actions-icon">
+              <i class="fas fa-heart"></i>
+            </div>
+          </div>
+          <!-- Download Image -->
+          <div class="download-image absolute right-4 bottom-4 p-3 rounded-md bg-gray-200 text-black">
+            <i class="fas fa-arrow-down"></i>
+          </div>
+          <!-- Author Details -->
+          <div class='author-details absolute bottom-4 left-4 flex'>
+            <div class="author-details-image mr-4">
+              <img class='details-avatar' src="https://i.pravatar.cc/300" alt=" ">
+            </div>
+            <div class="author-details-container">
+              <div class="detail-name">Brad Delvin</div>
+              <p class='detail-desc'>Lorem ipsum dolor sit amet.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- image item -->
+      <div class="image-item relative">
+        <img src="https://source.unsplash.com/random/?woman,night" alt="">
+        <!-- image Actions -->
+        <div class="image-actions-container  ">
+          <div class="image-actions flex absolute top-4 right-4">
+            <div class="image-actions-icon">
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="image-actions-icon">
+              <i class="fas fa-heart"></i>
+            </div>
+          </div>
+          <!-- Download Image -->
+          <div class="download-image absolute right-4 bottom-4 p-3 rounded-md bg-gray-200 text-black">
+            <i class="fas fa-arrow-down"></i>
+          </div>
+          <!-- Author Details -->
+          <div class='author-details absolute bottom-4 left-4 flex'>
+            <div class="author-details-image mr-4">
+              <img class='details-avatar' src="https://i.pravatar.cc/300" alt=" ">
+            </div>
+            <div class="author-details-container">
+              <div class="detail-name">Brad Delvin</div>
+              <p class='detail-desc'>Lorem ipsum dolor sit amet.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- image item -->
+      <div class="image-item relative">
+        <img src="https://source.unsplash.com/random/?girl" alt="">
+        <!-- image Actions -->
+        <div class="image-actions-container  ">
+          <div class="image-actions flex absolute top-4 right-4">
+            <div class="image-actions-icon">
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="image-actions-icon">
+              <i class="fas fa-heart"></i>
+            </div>
+          </div>
+          <!-- Download Image -->
+          <div class="download-image absolute right-4 bottom-4 p-3 rounded-md bg-gray-200 text-black">
+            <i class="fas fa-arrow-down"></i>
+          </div>
+          <!-- Author Details -->
+          <div class='author-details absolute bottom-4 left-4 flex'>
+            <div class="author-details-image mr-4">
+              <img class='details-avatar' src="https://i.pravatar.cc/300" alt=" ">
+            </div>
+            <div class="author-details-container">
+              <div class="detail-name">Brad Delvin</div>
+              <p class='detail-desc'>Lorem ipsum dolor sit amet.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- image item -->
+      <div class="image-item relative">
+        <img src="https://source.unsplash.com/random/?dog" alt="">
+        <!-- image Actions -->
+        <div class="image-actions-container  ">
+          <div class="image-actions flex absolute top-4 right-4">
+            <div class="image-actions-icon">
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="image-actions-icon">
+              <i class="fas fa-heart"></i>
+            </div>
+          </div>
+          <!-- Download Image -->
+          <div class="download-image absolute right-4 bottom-4 p-3 rounded-md bg-gray-200 text-black">
+            <i class="fas fa-arrow-down"></i>
+          </div>
+          <!-- Author Details -->
+          <div class='author-details absolute bottom-4 left-4 flex'>
+            <div class="author-details-image mr-4">
+              <img class='details-avatar' src="https://i.pravatar.cc/300" alt=" ">
+            </div>
+            <div class="author-details-container">
+              <div class="detail-name">Brad Delvin</div>
+              <p class='detail-desc'>Lorem ipsum dolor sit amet.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- image item -->
+      <div class="image-item relative">
+        <img src="https://source.unsplash.com/random/?black" alt="">
+        <!-- image Actions -->
+        <div class="image-actions-container  ">
+          <div class="image-actions flex absolute top-4 right-4">
+            <div class="image-actions-icon">
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="image-actions-icon">
+              <i class="fas fa-heart"></i>
+            </div>
+          </div>
+          <!-- Download Image -->
+          <div class="download-image absolute right-4 bottom-4 p-3 rounded-md bg-gray-200 text-black">
+            <i class="fas fa-arrow-down"></i>
+          </div>
+          <!-- Author Details -->
+          <div class='author-details absolute bottom-4 left-4 flex'>
+            <div class="author-details-image mr-4">
+              <img class='details-avatar' src="https://i.pravatar.cc/300" alt=" ">
+            </div>
+            <div class="author-details-container">
+              <div class="detail-name">Brad Delvin</div>
+              <p class='detail-desc'>Lorem ipsum dolor sit amet.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- image item -->
+      <div class="image-item relative">
+        <img src="https://source.unsplash.com/random/?blue" alt="">
+        <!-- image Actions -->
+        <div class="image-actions-container  ">
+          <div class="image-actions flex absolute top-4 right-4">
+            <div class="image-actions-icon">
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="image-actions-icon">
+              <i class="fas fa-heart"></i>
+            </div>
+          </div>
+          <!-- Download Image -->
+          <div class="download-image absolute right-4 bottom-4 p-3 rounded-md bg-gray-200 text-black">
+            <i class="fas fa-arrow-down"></i>
+          </div>
+          <!-- Author Details -->
+          <div class='author-details absolute bottom-4 left-4 flex'>
+            <div class="author-details-image mr-4">
+              <img class='details-avatar' src="https://i.pravatar.cc/300" alt=" ">
+            </div>
+            <div class="author-details-container">
+              <div class="detail-name">Brad Delvin</div>
+              <p class='detail-desc'>Lorem ipsum dolor sit amet.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- image item -->
+      <div class="image-item relative">
+        <img src="https://source.unsplash.com/random/?green" alt="">
+        <!-- image Actions -->
+        <div class="image-actions-container  ">
+          <div class="image-actions flex absolute top-4 right-4">
+            <div class="image-actions-icon">
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="image-actions-icon">
+              <i class="fas fa-heart"></i>
+            </div>
+          </div>
+          <!-- Download Image -->
+          <div class="download-image absolute right-4 bottom-4 p-3 rounded-md bg-gray-200 text-black">
+            <i class="fas fa-arrow-down"></i>
+          </div>
+          <!-- Author Details -->
+          <div class='author-details absolute bottom-4 left-4 flex'>
+            <div class="author-details-image mr-4">
+              <img class='details-avatar' src="https://i.pravatar.cc/300" alt=" ">
+            </div>
+            <div class="author-details-container">
+              <div class="detail-name">Brad Delvin</div>
+              <p class='detail-desc'>Lorem ipsum dolor sit amet.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- image item -->
+      <div class="image-item relative">
+        <img src="https://source.unsplash.com/random/?farm" alt="">
+        <!-- image Actions -->
+        <div class="image-actions-container  ">
+          <div class="image-actions flex absolute top-4 right-4">
+            <div class="image-actions-icon">
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="image-actions-icon">
+              <i class="fas fa-heart"></i>
+            </div>
+          </div>
+          <!-- Download Image -->
+          <div class="download-image absolute right-4 bottom-4 p-3 rounded-md bg-gray-200 text-black">
+            <i class="fas fa-arrow-down"></i>
+          </div>
+          <!-- Author Details -->
+          <div class='author-details absolute bottom-4 left-4 flex'>
+            <div class="author-details-image mr-4">
+              <img class='details-avatar' src="https://i.pravatar.cc/300" alt=" ">
+            </div>
+            <div class="author-details-container">
+              <div class="detail-name">Brad Delvin</div>
+              <p class='detail-desc'>Lorem ipsum dolor sit amet.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- image item -->
+      <div class="image-item relative">
+        <img src="https://source.unsplash.com/random/?surf" alt="">
+        <!-- image Actions -->
+        <div class="image-actions-container  ">
+          <div class="image-actions flex absolute top-4 right-4">
+            <div class="image-actions-icon">
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="image-actions-icon">
+              <i class="fas fa-heart"></i>
+            </div>
+          </div>
+          <!-- Download Image -->
+          <div class="download-image absolute right-4 bottom-4 p-3 rounded-md bg-gray-200 text-black">
+            <i class="fas fa-arrow-down"></i>
+          </div>
+          <!-- Author Details -->
+          <div class='author-details absolute bottom-4 left-4 flex'>
+            <div class="author-details-image mr-4">
+              <img class='details-avatar' src="https://i.pravatar.cc/300" alt=" ">
+            </div>
+            <div class="author-details-container">
+              <div class="detail-name">Brad Delvin</div>
+              <p class='detail-desc'>Lorem ipsum dolor sit amet.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- image item -->
+      <div class="image-item relative">
+        <img src="https://source.unsplash.com/random/?key" alt="">
+        <!-- image Actions -->
+        <div class="image-actions-container  ">
+          <div class="image-actions flex absolute top-4 right-4">
+            <div class="image-actions-icon">
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="image-actions-icon">
+              <i class="fas fa-heart"></i>
+            </div>
+          </div>
+          <!-- Download Image -->
+          <div class="download-image absolute right-4 bottom-4 p-3 rounded-md bg-gray-200 text-black">
+            <i class="fas fa-arrow-down"></i>
+          </div>
+          <!-- Author Details -->
+          <div class='author-details absolute bottom-4 left-4 flex'>
+            <div class="author-details-image mr-4">
+              <img class='details-avatar' src="https://i.pravatar.cc/300" alt=" ">
+            </div>
+            <div class="author-details-container">
+              <div class="detail-name">Brad Delvin</div>
+              <p class='detail-desc'>Lorem ipsum dolor sit amet.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- image item -->
+      <div class="image-item relative">
+        <img src="https://source.unsplash.com/random/?house" alt="" class=''>
+        <!-- image Actions -->
+        <div class="image-actions-container  ">
+          <div class="image-actions flex absolute top-4 right-4">
+            <div class="image-actions-icon">
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="image-actions-icon">
+              <i class="fas fa-heart"></i>
+            </div>
+          </div>
+          <!-- Download Image -->
+          <div class="download-image absolute right-4 bottom-4 p-3 rounded-md bg-gray-200 text-black">
+            <i class="fas fa-arrow-down"></i>
+          </div>
+          <!-- Author Details -->
+          <div class='author-details absolute bottom-4 left-4 flex'>
+            <div class="author-details-image mr-4">
+              <img class='details-avatar' src="https://i.pravatar.cc/300" alt=" ">
+            </div>
+            <div class="author-details-container">
+              <div class="detail-name">Brad Delvin</div>
+              <p class='detail-desc'>Lorem ipsum dolor sit amet.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- image item -->
+      <div class="image-item relative">
+        <img src="https://source.unsplash.com/random/?ball" alt="">
+        <!-- image Actions -->
+        <div class="image-actions-container  ">
+          <div class="image-actions flex absolute top-4 right-4">
+            <div class="image-actions-icon">
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="image-actions-icon">
+              <i class="fas fa-heart"></i>
+            </div>
+          </div>
+          <!-- Download Image -->
+          <div class="download-image absolute right-4 bottom-4 p-3 rounded-md bg-gray-200 text-black">
+            <i class="fas fa-arrow-down"></i>
+          </div>
+          <!-- Author Details -->
+          <div class='author-details absolute bottom-4 left-4 flex'>
+            <div class="author-details-image mr-4">
+              <img class='details-avatar' src="https://i.pravatar.cc/300" alt=" ">
+            </div>
+            <div class="author-details-container">
+              <div class="detail-name">Brad Delvin</div>
+              <p class='detail-desc'>Lorem ipsum dolor sit amet.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- image item -->
+      <div class="image-item relative">
+        <img src="https://source.unsplash.com/random/?sport" alt="">
+        <!-- image Actions -->
+        <div class="image-actions-container  ">
+          <div class="image-actions flex absolute top-4 right-4">
+            <div class="image-actions-icon">
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="image-actions-icon">
+              <i class="fas fa-heart"></i>
+            </div>
+          </div>
+          <!-- Download Image -->
+          <div class="download-image absolute right-4 bottom-4 p-3 rounded-md bg-gray-200 text-black">
+            <i class="fas fa-arrow-down"></i>
+          </div>
+          <!-- Author Details -->
+          <div class='author-details absolute bottom-4 left-4 flex'>
+            <div class="author-details-image mr-4">
+              <img class='details-avatar' src="https://i.pravatar.cc/300" alt=" ">
+            </div>
+            <div class="author-details-container">
+              <div class="detail-name">Brad Delvin</div>
+              <p class='detail-desc'>Lorem ipsum dolor sit amet.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+
 </html>
