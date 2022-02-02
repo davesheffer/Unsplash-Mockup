@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+
+    .Feature-item {
+        @apply text-2xl 
+                ml-5
+    }
+    .svg-container {
+        @apply top-2 
+                absolute
+    }
+    }
